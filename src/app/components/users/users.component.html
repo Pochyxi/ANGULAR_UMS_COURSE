@@ -1,0 +1,17 @@
+<table>
+  <caption>
+    {{
+      title
+    }}
+  </caption>
+  <tr>
+    <th>Name</th>
+    <th>Last name</th>
+    <th>Fiscal Code</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Province</th>
+    <th>Age</th>
+  </tr>
+  <tr app-user *ngFor="let user of users" [user-data]="user"></tr>
+</table>
