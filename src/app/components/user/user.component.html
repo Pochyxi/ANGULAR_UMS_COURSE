@@ -5,3 +5,11 @@
 <td>{{ user.province }}</td>
 <td>{{ user.phone }}</td>
 <td>{{ user.age }}</td>
+<td>
+  <button
+  class="btn btn-outline-primary w-100 mb-1"
+  (click)="onUpdateUser(user)">MODIFICA</button>
+  <button
+  class="btn btn-outline-danger w-100 mb-1"
+  (click)="onDeleteUser(user)">ELIMINA</button>
+</td>

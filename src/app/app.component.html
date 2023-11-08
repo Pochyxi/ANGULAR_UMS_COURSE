@@ -1,2 +1,14 @@
-<app-users></app-users>
+
+<div class="container-fluid row justify-content-between">
+  <div class="users col-12 col-xl-9">
+    <h1>Sistema di gestione Utenti</h1>
+    <h3 class="text-secondary">Corso Angular</h3>
+    <a href="#" (click)="newUser()" class="btn btn-outline-primary mb-2 w-100">Nuovo utente</a>
+    <app-users (onSelectedUser)="updateUser($event)"></app-users>
+  </div>
+  <div *ngIf="showForm" class="userDetail col-6 col-xl-3">
+    <h2>Dettaglio utente</h2>
+    <app-user-detail [user-data]="userSelected"></app-user-detail>
+  </div>
+</div>
 <router-outlet></router-outlet>
