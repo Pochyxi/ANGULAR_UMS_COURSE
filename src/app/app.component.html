@@ -1,14 +1,32 @@
-
+<!-- Container principale con layout fluido e riga giustificata -->
 <div class="container-fluid row justify-content-between">
+  <!-- Sezione principale degli utenti -->
   <div class="users col-12 col-xl-9">
     <h1>Sistema di gestione Utenti</h1>
-    <h3 class="text-secondary">Corso Angular</h3>
-    <a href="#" (click)="newUser()" class="btn btn-outline-primary mb-2 w-100">Nuovo utente</a>
+    <h3 class="text-secondary">Corso Angular - {{ title }}</h3>
+
+    <!-- Riga per il pulsante "Nuovo utente" -->
+    <div class="row">
+      <div class="col">
+        <!-- Pulsante per creare un nuovo utente -->
+        <a href="#" (click)="newUser()" class="btn btn-outline-primary mb-2">Nuovo utente</a>
+      </div>
+    </div>
+
+    <!-- Componente app-users con binding dell'evento onSelectedUser -->
     <app-users (onSelectedUser)="updateUser($event)"></app-users>
   </div>
-  <div *ngIf="showForm" class="userDetail col-6 col-xl-3">
+
+  <!-- Sezione dettaglio utente, visibile solo se showForm è true -->
+  <div *ngIf="showForm" class="userDetail card col-6 col-xl-3">
     <h2>Dettaglio utente</h2>
-    <app-user-detail [user-data]="userSelected"></app-user-detail>
+    <!-- Componente app-user-detail con binding di input e output -->
+    <app-user-detail
+      [user-data]="userSelected"
+      (showFormChange)="showForm = $event"
+    ></app-user-detail>
   </div>
 </div>
+
+<!-- Outlet per il router di Angular -->
 <router-outlet></router-outlet>

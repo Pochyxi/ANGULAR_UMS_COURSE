@@ -1,35 +1,56 @@
 <form>
+  <!-- Campo nascosto per l'ID utente -->
   <input type="hidden" name="id" [(ngModel)]="user.id">
+
+  <!-- Campo per il nome -->
   <div class="form-group">
     <label for="firstname">Nome</label>
     <input [(ngModel)]="user.name" class="form-control" name="firstname" id="firstname" type="text">
   </div>
+
+  <!-- Campo per il cognome -->
   <div class="form-group">
     <label for="lastname">Cognome</label>
     <input [(ngModel)]="user.lastname" class="form-control" name="lastname" id="lastname" type="text">
   </div>
+
+  <!-- Campo per l'email -->
   <div class="form-group">
     <label for="email">Email</label>
     <input [(ngModel)]="user.email" class="form-control" name="email" id="email" type="email">
   </div>
+
+  <!-- Campo per il codice fiscale -->
   <div class="form-group">
     <label for="fiscalcode">Codice fiscale</label>
     <input [(ngModel)]="user.fiscalcode" class="form-control" name="fiscalcode" id="fiscalcode" type="text">
   </div>
+
+  <!-- Campo per la provincia -->
   <div class="form-group">
     <label for="province">Provincia</label>
     <input [(ngModel)]="user.province" class="form-control" name="province" id="province" type="text">
   </div>
+
+  <!-- Campo per il numero di cellulare -->
   <div class="form-group">
     <label for="phone">Cellulare</label>
     <input [(ngModel)]="user.phone" class="form-control" name="phone" id="phone" type="text">
   </div>
+
+  <!-- Campo per l'età -->
   <div class="form-group">
     <label for="age">Età</label>
     <input [(ngModel)]="user.age" class="form-control" name="age" id="age" type="number">
   </div>
+
+  <!-- Pulsante per salvare i dati dell'utente -->
   <div class="form-group form-footer text-center mt-2">
     <button (click)="saveUser()" class="btn btn-outline-success w-100">SALVA</button>
   </div>
-</form>
 
+  <!-- Pulsante per annullare l'operazione -->
+  <div class="form-group form-footer text-center mt-2">
+    <button (click)="annulla()" class="btn btn-outline-secondary w-100">ANNULLA</button>
+  </div>
+</form>

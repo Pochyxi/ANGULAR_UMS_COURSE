@@ -1,15 +1,34 @@
+
+<!-- Visualizzazione del nome dell'utente -->
 <td>{{ user.name }}</td>
+
+<!-- Visualizzazione del cognome dell'utente -->
 <td>{{ user.lastname }}</td>
+
+<!-- Visualizzazione dell'indirizzo email dell'utente -->
 <td>{{ user.email }}</td>
+
+<!-- Visualizzazione del codice fiscale dell'utente -->
 <td>{{ user.fiscalcode }}</td>
+
+<!-- Visualizzazione della provincia di residenza dell'utente -->
 <td>{{ user.province }}</td>
+
+<!-- Visualizzazione del numero di telefono dell'utente -->
 <td>{{ user.phone }}</td>
+
+<!-- Visualizzazione dell'età dell'utente -->
 <td>{{ user.age }}</td>
+
+<!-- Cella contenente i pulsanti per le azioni sull'utente -->
 <td>
+  <!-- Pulsante per modificare i dati dell'utente -->
   <button
-  class="btn btn-outline-primary w-100 mb-1"
-  (click)="onUpdateUser(user)">MODIFICA</button>
+    class="btn btn-outline-primary w-100 mb-1"
+    (click)="onUpdateUser(user)">MODIFICA</button>
+
+  <!-- Pulsante per eliminare l'utente dal sistema -->
   <button
-  class="btn btn-outline-danger w-100 mb-1"
-  (click)="onDeleteUser(user)">ELIMINA</button>
+    class="btn btn-outline-danger w-100 mb-1"
+    (click)="onDeleteUser(user)">ELIMINA</button>
 </td>

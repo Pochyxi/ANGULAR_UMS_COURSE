@@ -1,9 +1,10 @@
 <table>
+  <!-- Titolo della tabella -->
   <caption>
-    {{
-      title
-    }}
+    {{ title }}
   </caption>
+
+  <!-- Intestazione della tabella -->
   <tr>
     <th>Name</th>
     <th>Last name</th>
@@ -14,9 +15,13 @@
     <th>Age</th>
     <th>Actions</th>
   </tr>
+
+  <!-- Righe della tabella generate dinamicamente -->
   <tr
-  app-user *ngFor="let user of users"
-  [user-data]="user"
-  (onDeleteUser)="onDeleteUser($event)"
-  (onSelectedUser)="onSelectedUser($event)"></tr>
+    app-user
+    *ngFor="let user of users"
+    [user-data]="user"
+    (onDeleteUser)="onDeleteUser($event)"
+    (onSelectedUser)="onSelectedUser($event)">
+  </tr>
 </table>
